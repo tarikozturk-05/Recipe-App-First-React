@@ -56,7 +56,7 @@ const Home = () => {
       <Navbar />
       <form onSubmit={onSubmitLogin} className="container w-50">
         <fieldset>
-          <legend>Coss AnkaDöner</legend>
+          <legend style={{color:"aqua"}}>Coss AnkaDöner</legend>
           <div className="mb-3">
             <label htmlFor="disabledTextInput" className="form-label">
               Food Name
@@ -86,7 +86,7 @@ const Home = () => {
             </select>
           </div>
 
-          <button type="submit" className="btn btn-primary">
+          <button type="submit" style={{backgroundColor:"#1B7F79",color:"aqua"}} className="btn">
             Submit
           </button>
         </fieldset>

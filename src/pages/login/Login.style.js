@@ -3,7 +3,7 @@ import styled from 'styled-components';
 const LoginDiv = styled.div`
  margin-top: 15rem;
  background-color: #1B7F79;
- height: 20rem;
+ height: 24rem;
  padding-top:2rem;
  
 
