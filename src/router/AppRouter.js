@@ -13,6 +13,8 @@ const AppRouter = () => {
     
     <Routes>
         <Route path='/' element={<Login setLoginOn={setLoginOn} loginOn={loginOn}/>}/>
+
+        
         <Route path='/home' element={<PrivateRouter setLoginOn={setLoginOn} loginOn={loginOn}/>}>
             <Route path='/home' element={<Home/>}/>
         </Route>

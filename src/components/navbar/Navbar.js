@@ -8,6 +8,11 @@ const Navbar = () => {
     <NavbarDiv>
         <img src={yemekLogo} width="150"  alt="" />
     <NavbarUl>
+    <li>
+        <NavLink to={"/home"} style={({isActive})=>({color:isActive && "red"})}>
+             Home
+        
+        </NavLink></li>
         <li>
         <NavLink to={"/about"} style={({isActive})=>({color:isActive && "red"})}>
              About

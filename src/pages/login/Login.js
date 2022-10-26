@@ -5,9 +5,16 @@ import PrivateRouter from '../../router/PrivateRouter'
 import LoginDiv ,{LoginLabel,LoginButton} from './Login.style'
 
 const Login = ({setLoginOn,loginOn}) => {
-
+const [veri, setVeri] = useState({name:"",password:""})
 
 const navigate = useNavigate()
+
+  const handleChange=(e)=>{
+    setVeri({
+      ...veri,  [e.target.id] : e.target.value
+    })
+
+  }
 
   const onSubmitLogin=(e)=>{
 e.preventDefault() ;
@@ -22,14 +29,14 @@ navigate("/home")
         <form onSubmit={onSubmitLogin} action="" >
           <h1>Login</h1>
 
-            <LoginLabel htmlFor="isimfor">İsminizi Giriniz</LoginLabel>
+            <LoginLabel htmlFor="name">İsminizi Giriniz</LoginLabel>
             <br />
-            <input value={"aaa"} style={{border:"2px solid #00CCC0" , borderRadius:"5px",marginTop:"1rem",padding:"0.3rem"}} type="text" id='isimfor' required />
+            <input value={veri.name}  onChange={handleChange} style={{border:"2px solid #00CCC0" , borderRadius:"5px",marginTop:"1rem",padding:"0.3rem"}} type="text" id='name' required />
             <br />
 <br />
-            <LoginLabel htmlFor="sifrefor">Şifrenizi Giriniz</LoginLabel>
+            <LoginLabel htmlFor="password">Şifrenizi Giriniz</LoginLabel>
             <br />
-            <input value={"aaa"}  style={{border:"2px solid #00CCC0" , borderRadius:"5px",marginTop:"1rem",padding:"0.3rem"}} type="password" id='sifrefor' required />
+            <input value={veri.password} onChange={handleChange} style={{border:"2px solid #00CCC0" , borderRadius:"5px",marginTop:"1rem",padding:"0.3rem"}} type="password" id='password' required />
             <br /><br />
           <LoginButton type="submit"onClick={()=> setLoginOn(true)}>Submit</LoginButton>
           

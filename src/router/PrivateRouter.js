@@ -6,8 +6,7 @@ const PrivateRouter = ({setLoginOn,loginOn}) => {
   console.log(loginOn)
   return (
     <div>
-    {loginOn && <> <Outlet/> </>
-    }
+    {loginOn && <> <Outlet/> </>}
    </div>
   )
 }
