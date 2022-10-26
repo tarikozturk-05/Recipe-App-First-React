@@ -13,7 +13,6 @@ const navigate = useNavigate()
     setVeri({
       ...veri,  [e.target.id] : e.target.value
     })
-console.log(veri);
   }
 
   const onSubmitLogin=(e)=>{
