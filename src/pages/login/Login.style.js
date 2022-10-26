@@ -14,7 +14,7 @@ color: #00CCC0;
 `;
 export const LoginButton = styled.button`
 background-color: #FF4858;
-border: yellow;
+border: 2px solid #FF4858;
 padding: 0.5rem;
 border-radius: 5px;
 `;
