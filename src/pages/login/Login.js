@@ -13,13 +13,13 @@ const navigate = useNavigate()
     setVeri({
       ...veri,  [e.target.id] : e.target.value
     })
-
+console.log(veri);
   }
 
   const onSubmitLogin=(e)=>{
 e.preventDefault() ;
-// console.log("aaaaaaaaaaaaaaaaaaa")
-console.log(loginOn);
+sessionStorage.setItem("veri", JSON.stringify(veri));
+setVeri({ username: "", password: "" });
 navigate("/home")
 
   }
@@ -31,12 +31,17 @@ navigate("/home")
 
             <LoginLabel htmlFor="name">İsminizi Giriniz</LoginLabel>
             <br />
+
+
             <input value={veri.name}  onChange={handleChange} style={{border:"2px solid #00CCC0" , borderRadius:"5px",marginTop:"1rem",padding:"0.3rem"}} type="text" id='name' required />
             <br />
 <br />
             <LoginLabel htmlFor="password">Şifrenizi Giriniz</LoginLabel>
             <br />
+
             <input value={veri.password} onChange={handleChange} style={{border:"2px solid #00CCC0" , borderRadius:"5px",marginTop:"1rem",padding:"0.3rem"}} type="password" id='password' required />
+
+
             <br /><br />
           <LoginButton type="submit"onClick={()=> setLoginOn(true)}>Submit</LoginButton>
           
